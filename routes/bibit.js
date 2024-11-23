@@ -18,3 +18,14 @@ router.get("/", (req, res) => {
     res.send(bibit); 
 }); 
  
+router.post('/', (req, res) => { 
+    const newBibit = { 
+        id: bibit.length + 1, 
+        namabibit: req.body.namabibit, 
+        jenis: req.body.jenis, 
+        kadaluarsa: req.body.kadaluarsa
+    }; 
+    bibit.push(newBibit); 
+    res.status(201).json(newBibit); 
+}); 
+ 
