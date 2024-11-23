@@ -14,3 +14,7 @@ const bibit = [
         kadaluarsa: 2022, 
     }, 
 ]; 
+router.get("/", (req, res) => { 
+    res.send(bibit); 
+}); 
+ 
