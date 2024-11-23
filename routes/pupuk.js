@@ -18,3 +18,14 @@ router.get("/", (req, res) => {
     res.send(pupuk); 
 }); 
  
+router.post('/', (req, res) => { 
+    const newpupuk = { 
+        idpupuk: pupuk.length + 1, 
+        namapupuk: req.body.namapupuk, 
+        jenis: req.body.jenis, 
+        kandungan: req.body.kandungan
+    }; 
+    pupuk.push(newpupuk); 
+    res.status(201).json(newpupuk); 
+}); 
+ 
