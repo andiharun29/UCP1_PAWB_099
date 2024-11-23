@@ -13,3 +13,8 @@ const pupuk = [
         jenis: "sayuran", 
         kadaluars: "ke labu", 
     }, 
+]; 
+router.get("/", (req, res) => { 
+    res.send(pupuk); 
+}); 
+ 
